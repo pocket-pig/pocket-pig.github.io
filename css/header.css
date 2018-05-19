@@ -1,0 +1,175 @@
+﻿		
+		.cakeface_nav_container {
+		    width: 100%;
+		    height: 80px;
+		    background: url(../img/cakeface.home.nav.bg1.png) center top no-repeat;
+		    color: #827c79;
+		    font: 16px/16px 'Microsoft YaHei';
+		}
+
+
+		.cakeface_nav_container,
+		.nav_main .cakefacenav .link_div
+		{
+		    -moz-box-sizing: content-box;  /*Firefox3.5+*/
+		    -webkit-box-sizing: content-box; /*Safari3.2+*/
+		    -o-box-sizing: content-box; /*Opera9.6*/
+		    -ms-box-sizing: content-box; /*IE8*/
+		    box-sizing: content-box; /*W3C*/
+		}
+		
+		.cakeface_nav_container a,
+		.cakeface_nav_container a:hover {
+		    text-decoration: none;
+		}
+
+		.nav_main {
+		    height: 100%;
+		    width: 1200px;
+		    margin: 0 auto;
+		}
+
+
+		/*icon小图标*/
+		.nav_main .nav_icon {
+		    display: inline-block;
+		    width: 16px;
+		    height: 15px;
+		    margin-right: 5px;
+		    vertical-align: middle;
+		    background: url('../img/icons.png') no-repeat top center;
+		}
+
+		.nav_icon.icon-user {
+		    width: 30px;
+		    height: 30px;
+		    margin-right: 5px;
+		    border-radius: 100%;
+		    border: 1px solid transparent;
+		    background-position: -2px -297px;
+		}
+
+		.nav_icon.icon-close {
+		    background-position: -1px -400px;
+		}
+
+		.nav_icon.icon-help {
+		    background-position: -3px -73px;
+		}
+
+		.nav_icon.icon-reg {
+		    background-position: -5px -270px;
+		}
+
+		.nav_icon.icon-reg-active {
+		    background-position: -4px -240px;
+		}
+
+		.nav_icon.icon-mobile {
+		    background-position: -2px -210px;
+		}
+
+		.nav_icon.icon-mobile-active {
+		    background-position: -2px -180px;
+		}
+
+		.nav_icon.icon-email {
+		    background-position: -4px -152px;
+		}
+
+		.nav_icon.icon-email-active {
+		    background-position: -4px -152px;
+		}
+
+
+		/*左上角图标logo*/
+		.nav_main .nav_logo,
+		.nav_main .cakefacenav {
+		    float: left;
+		}
+
+		.nav_main .nav_logo {
+		    display: block;
+		    width: 260px;
+		    height: 40px;
+		    margin-top: 20px;
+		    margin-right: 20px;
+		    text-indent: -1000px;
+		    background: url(../img/cakeface.home.log1.png) center top no-repeat;
+		}
+
+		.nav_main_loged .nav_logo {
+		    margin-right: 20px;
+		}
+
+
+
+		/*nav link*/
+		.nav_main .cakefacenav .link_div {
+		    position: relative;
+		    float: left;
+		    padding: 23px 7px;
+		    text-align: center;
+		    width: 78px;
+		}
+
+		
+		.nav_main .cakefacenav .link_div a {
+		    display: block;/*	link_div衍生出内边框*/
+		    font-size: 15px;
+		    color: #827c79;
+		}
+
+
+		/*link_div hover 背景框框*/
+		.nav_main .cakefacenav .link_div:hover {
+		    background: url(../img/cakeface.home.nav.hover.bg.png) top center no-repeat;
+		    background-size: cover;
+		}
+
+		/*link_div hover 显示pop框*/
+		.nav_main .cakefacenav .link_div:hover .link_pop {
+		    display: block;
+		    z-index: 1001;
+		}
+
+		/*link_div hover 蓝色高亮*/
+		.nav_main .cakefacenav .link_div:hover .link_nav {
+		    color: #00c0ff;
+		}
+
+		.nav_main .cakefacenav .link_div span {
+		    display: block;
+		    font-size: 16px;
+		}
+
+		.nav_main .cakefacenav .link_div .link_nav_e {
+		    margin-top: 2px;
+		    font-size: 12px;
+		    line-height: 16px;
+		    -webkit-transform: scale(0.75);
+		    -moz-transform: scale(0.75);
+		    -ms-transform: scale(0.75);
+		    transform: scale(0.75);
+		}
+
+		.nav_main .cakefacenav .link_div .link_pop {
+		    display: none;
+		    position: absolute;
+		    top: 70px;
+		    left: 0;
+		    padding-top: 10px;
+		    width: 100%;
+		    height: 239px;
+		    font-size: 15px;
+		    line-height: 30px;
+		    text-align: center;
+		    background: url(../img/cakeface.home.submenu.bg.png) top center no-repeat;
+		    background-size: cover;
+		}
+
+		/*标签蓝色*/
+		.nav_main .cakefacenav .link_div .link_pop a:hover {
+		    color: #00c0ff;
+		}
+

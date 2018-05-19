@@ -1,0 +1,554 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页面</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+	
+	<!-- nav框 logo+导航条 -->
+	<style type="text/css">
+		
+		.cakeface_nav_container {
+		    width: 100%;
+		    height: 80px;
+		    background: url(./img/cakeface.home.nav.bg1.png) center top no-repeat;
+		    color: #827c79;
+		    font: 16px/16px 'Microsoft YaHei';
+		}
+
+
+		.cakeface_nav_container,
+		.nav_main .cakefacenav .link_div
+		{
+		    -moz-box-sizing: content-box;  /*Firefox3.5+*/
+		    -webkit-box-sizing: content-box; /*Safari3.2+*/
+		    -o-box-sizing: content-box; /*Opera9.6*/
+		    -ms-box-sizing: content-box; /*IE8*/
+		    box-sizing: content-box; /*W3C*/
+		}
+		
+		.cakeface_nav_container a,
+		.cakeface_nav_container a:hover {
+		    text-decoration: none;
+		}
+
+		.nav_main {
+		    height: 100%;
+		    width: 1200px;
+		    margin: 0 auto;
+		}
+
+
+		/*icon小图标*/
+		.nav_main .nav_icon {
+		    display: inline-block;
+		    width: 16px;
+		    height: 15px;
+		    margin-right: 5px;
+		    vertical-align: middle;
+		    background: url('./img/icons.png') no-repeat top center;
+		}
+
+		.nav_icon.icon-user {
+		    width: 30px;
+		    height: 30px;
+		    margin-right: 5px;
+		    border-radius: 100%;
+		    border: 1px solid transparent;
+		    background-position: -2px -297px;
+		}
+
+		.nav_icon.icon-close {
+		    background-position: -1px -400px;
+		}
+
+		.nav_icon.icon-help {
+		    background-position: -3px -73px;
+		}
+
+		.nav_icon.icon-reg {
+		    background-position: -5px -270px;
+		}
+
+		.nav_icon.icon-reg-active {
+		    background-position: -4px -240px;
+		}
+
+		.nav_icon.icon-mobile {
+		    background-position: -2px -210px;
+		}
+
+		.nav_icon.icon-mobile-active {
+		    background-position: -2px -180px;
+		}
+
+		.nav_icon.icon-email {
+		    background-position: -4px -152px;
+		}
+
+		.nav_icon.icon-email-active {
+		    background-position: -4px -152px;
+		}
+
+
+		/*左上角图标logo*/
+		.nav_main .nav_logo,
+		.nav_main .cakefacenav {
+		    float: left;
+		}
+
+		.nav_main .nav_logo {
+		    display: block;
+		    width: 260px;
+		    height: 40px;
+		    margin-top: 20px;
+		    margin-right: 20px;
+		    text-indent: -1000px;
+		    background: url(./img/cakeface.home.log1.png) center top no-repeat;
+		}
+
+		.nav_main_loged .nav_logo {
+		    margin-right: 20px;
+		}
+
+
+
+		/*nav link*/
+		.nav_main .cakefacenav .link_div {
+		    position: relative;
+		    float: left;
+		    padding: 23px 7px;
+		    text-align: center;
+		    width: 78px;
+		}
+
+		
+		.nav_main .cakefacenav .link_div a {
+		    display: block;/*	link_div衍生出内边框*/
+		    font-size: 15px;
+		    color: #827c79;
+		}
+
+
+		/*link_div hover 背景框框*/
+		.nav_main .cakefacenav .link_div:hover {
+		    background: url(./img/cakeface.home.nav.hover.bg.png) top center no-repeat;
+		    background-size: cover;
+		}
+
+		/*link_div hover 显示pop框*/
+		.nav_main .cakefacenav .link_div:hover .link_pop {
+		    display: block;
+		    z-index: 1001;
+		}
+
+		/*link_div hover 蓝色高亮*/
+		.nav_main .cakefacenav .link_div:hover .link_nav {
+		    color: #00c0ff;
+		}
+
+		.nav_main .cakefacenav .link_div span {
+		    display: block;
+		    font-size: 16px;
+		}
+
+		.nav_main .cakefacenav .link_div .link_nav_e {
+		    margin-top: 2px;
+		    font-size: 12px;
+		    line-height: 16px;
+		    -webkit-transform: scale(0.75);
+		    -moz-transform: scale(0.75);
+		    -ms-transform: scale(0.75);
+		    transform: scale(0.75);
+		}
+
+		.nav_main .cakefacenav .link_div .link_pop {
+		    display: none;
+		    position: absolute;
+		    top: 70px;
+		    left: 0;
+		    padding-top: 10px;
+		    width: 100%;
+		    height: 239px;
+		    font-size: 15px;
+		    line-height: 30px;
+		    text-align: center;
+		    background: url(./img/cakeface.home.submenu.bg.png) top center no-repeat;
+		    background-size: cover;
+		}
+
+		/*标签蓝色*/
+		.nav_main .cakefacenav .link_div .link_pop a:hover {
+		    color: #00c0ff;
+		}</style>
+
+	<!-- nav框 user css -->
+	<style type="text/css">
+
+		/*
+		 *  user login
+		 */
+		.nav_main .cakefaceuser {
+		    float: right;
+		    width: 234px;
+		    height: 100%;
+		    margin-right: 0;
+		    color: #ccc;
+		    position: relative;
+		}
+
+		.nav_main .cakefaceuser .info {
+		    padding-left: 65px;
+		    height: 100%;
+		}
+
+		.nav_main .cakefaceuser .info-st {
+		    padding: 3px 0 0 60px;
+		    height: 100%;
+		}
+
+		.nav_main .cakefaceuser .nav-avatar {
+		    position: absolute;
+		    width: 50px;
+		    height: 50px;
+		    left: 0;
+		    top: 13px;
+		    border-radius: 50%;
+		    border: 1px solid #262323;
+		    background-color: #101215;
+		    box-sizing: content-box;
+		}
+		.nav_main .cakefaceuser .info-st .nav-avatar {
+		    left: -10px;
+		}
+
+		.nav_main .cakefaceuser .avatar-default {
+		   /* background-color: #101215;*/
+		   background-color: white;
+		    background-image: url('./img/蛋糕_1.png');
+		   /* background-position: 100px 100px;*/
+			background-size: contain;
+
+		}
+		.nav_main .cakefaceuser .enter-box{
+		    margin-top: 17px;
+		    display: block;
+		}
+		.nav_main .cakefaceuser .info-st .enter-box {
+		    margin-top: 16px;
+		}
+		.nav_main_loged .nav_main .cakefaceuser .enter-box,
+		.nav_main.nav_main_loged .cakefaceuser .enter-box{
+		    margin-top: 20px;
+		}
+		.nav_main_loged .nav_main .cakefaceuser .info-st .enter-box,
+		.nav_main.nav_main_loged .cakefaceuser .info-st .enter-box {
+		    margin-top: 16px;
+		}
+
+		.nav_main .cakefaceuser .enter-box b{
+		    font-weight: 400;
+		    font-family: 'Microsoft YaHei';
+		}
+		.nav_main .cakefaceuser .name {
+		    font-size: 18px;
+		    color: #00b7f4;
+		    line-height: 1.2;
+		    text-overflow:ellipsis;
+		    overflow:hidden;
+		    white-space:nowrap;
+		    margin: 0;
+		    margin-bottom: 3px;
+		}
+		.nav_main_loged .nav_main .cakefaceuser .name,
+		.nav_main.nav_main_loged .cakefaceuser .name{
+		    margin-bottom: 0;
+		}
+		.nav_main .cakefaceuser .info-st .name {
+		    font-size: 14px;
+		    font-family: "Microsoft YaHei",Verdana,Geneva,sans-serif,\5b8b\4f53;
+		}
+		.nav_main .cakefaceuser .name span{
+		    color: #fff;
+		    font-family: "Microsoft YaHei",Verdana,Geneva,sans-serif,\5b8b\4f53;
+		}
+		.nav_main .cakefaceuser .name .name-info{
+		    display: block;
+		    margin-bottom: 8px;
+		}
+		.nav_main .cakefaceuser .name a {
+		    color: #00b7f4;
+		}
+		.nav_main .cakefaceuser .name a:hover {
+		    text-decoration: underline;
+		}
+		.nav_main .cakefaceuser .tt {
+		    font-size: 12px;
+		    color: #898989;
+		    padding: 0;
+		    line-height: 1.5;
+		    font-family: "Microsoft YaHei",Verdana,Geneva,sans-serif,\5b8b\4f53;
+		}</style>
+
+	<!--互动 作者微信 css -->
+	<style type="text/css">
+		.nav_wxdialog {
+		    position: fixed;
+		    z-index: 1004;
+		    width: 620px;
+		    height: 385px;
+		    left: 50%;
+		    top: 50%;
+		    margin: -192px 0 0 -310px;
+		    background: #2a282c url(./img/navwx_bg.jpg) no-repeat top center;
+		    text-align: center;
+		    color: #fff;
+		}
+
+		.nav_wxdialog h4 {
+		    font-size: 20px;
+		    font-weight: bold;
+		    margin: 54px 0 14px 0;
+		}
+
+		.nav_wxdialog p {
+		    font-size: 16px;
+		    margin-bottom: 45px;
+		    color: #999999;
+		}
+
+		.nav_wxdialog li {
+		    display: inline-block;
+		    width: 156px;
+		    height: 196px;
+		    margin: 0 20px;
+		}
+
+		.nav_wxdialog li i {
+		    display: block;
+		    width: 156px;
+		    height: 156px;
+		    background-color: #fff;
+		}
+
+		.nav_wxdialog .subscribe i {
+		    background-image: url(./img/navwx_subscribe1.png);
+		}
+
+		.nav_wxdialog .vservice i {
+		    background-image: url(./img/navwx_vservice1.png);
+		}
+
+		.nav_wxdialog li span {
+		    font-size: 14px;
+		    line-height: 40px;
+		}
+
+		.nav_wxdialog .close {
+		    position: absolute;
+		    width: 60px;
+		    height: 60px;
+		    background: #3c2728;
+		    right: -61px;
+		    top: 0;
+		}
+
+		.nav_wxdialog .close:after {
+		    content: '';
+		    display: block;
+		    width: 60px;
+		    height: 60px;
+		    background: url(./img/navwx_close.png);
+		    opacity: 0.6;
+		}
+
+		.nav_wxdialog .close:hover:after {
+		    opacity: 1;
+		}
+
+		#cakeface_overlay {
+		    background-color: #000;
+		    display: none;
+		    height: 100% !important;
+		    left: 0;
+		    position: fixed;
+		    top: 0;
+		    bottom: 0;
+		    right: 0;
+		    width: 100%;
+		    opacity: 0.7;
+		    filter: alpha(opacity=70);
+		    z-index: 1003;
+		}</style>
+
+	
+
+	<script type="text/javascript">
+
+	    // 互动 作者微信 显示关闭函数
+	    function wxdialog() {
+	        var wxdialog = document.getElementById("j-navwxdialog");
+	        var overlay = document.getElementById("cakeface_overlay");
+	        wxdialog.style.display="block";
+	        overlay.style.display="block";
+	    }
+	    function wxclose() {
+	        var wxdialog = document.getElementById("j-navwxdialog");
+	        var overlay = document.getElementById("cakeface_overlay");
+	        wxdialog.style.display="none";
+	        overlay.style.display="none";
+	    }
+	</script>
+
+
+</head>
+	<body>
+	    <div id="cakeface_topnav" class="cakeface_nav_container">
+	        <div class="nav_main clearfix">
+
+				<!-- 图片 -->
+	    		<a href="index.html" title="《cakeface》官方网站" class="nav_logo" target="_blank">《cakeface》官方网站</a>
+				
+				<!-- 导航条 -->
+	    		<div class="cakefacenav" id="cakefacenav">
+
+					<!-- 首页 -->
+		        	<div class="link_div">
+		            	<a href="index.html" target="_blank" id=" link_nav1" class="link_nav">
+		                	<span>首页</span>
+		                	<span class="link_nav_e">HOME</span>
+		            	</a>
+		        	</div>
+
+					<!-- 资讯 -->
+			        <div class="link_div">
+			            <a href="http://www.cakeface.com.cn/news/index.htm" id="link_nav2" class="link_nav" target="_blank">
+			                <span>资讯</span>
+			                <span class="link_nav_e">NEWS</span>
+			            </a>
+			            <div class="link_pop">
+			                <a href="http://www.cakeface.com.cn/news/gamenews/index.htm" target="_blank">今日热门</a>
+			                <a href="http://www.cakeface.com.cn/news/competition/index.htm" target="_blank">网红甜品</a>
+			                <a href="http://www.cakeface.com.cn/raiders/index.htm" target="_blank">吃货攻略</a>
+			            </div>
+			        </div>
+
+			        <!-- 赛事 -->
+			        <div class="link_div">
+			            <a href="http://act.cakeface.com.cn/match" id="link_nav3" class="link_nav" target="_blank">
+			                <span>甜品分类</span>
+			                <span class="link_nav_e" style="margin-left: 0px;">SORT</span>
+			            </a>
+			            <div class="link_pop">
+			                <a href="http://www.cakeface.com.cn/procircuit/" target="_blank">中式甜品</a>
+			                <a href="http://act.cakeface.com.cn/match" target="_blank">西式甜品</a>
+			                <a href="http://act.cakeface.com.cn/match/list" target="_blank">港式甜品</a>
+			                <a href="http://www.cakeface.com.cn/activity/gamematch/index.htm" target="_blank">日式甜品</a>
+			                <a href="http://www.cakeface.com.cn/activity/gamematch/index.htm" target="_blank">其他</a>
+			            </div>
+			        </div>
+
+			        <!-- 互动 -->
+			        <div class="link_div">
+			            <a href="http://www.cakeface.com.cn/activity/all/index.htm" id="" class="link_nav" target="_blank">
+			                <span>互动</span>
+			                <span class="link_nav_e">INTERACTION</span>
+			            </a>
+			            <div class="link_pop">
+			                <a href="http://bbs.cakeface.com.cn/forum.php" target="_blank">玩家论坛</a>
+			                <a href="#" id="j-navwxlink" onclick="wxdialog()">作者微信</a>
+			            </div>
+			        </div>
+
+			        <!-- 资料 -->
+<!-- 			        <div class="link_div">
+			            <a href="http://www.cakeface.com.cn/zlz/index.htm" id="link_nav4" class="link_nav" target="_blank">
+			                <span>资料</span>
+			                <span class="link_nav_e">DATA</span>
+			            </a>
+			            <div class="link_pop">
+			                <a href="http://www.cakeface.com.cn/heroes/index.htm" target="_blank">英雄资料</a>
+			                <a href="http://www.cakeface.com.cn/items/index.htm" target="_blank">甜品资料</a>
+			                <a href="http://www.cakeface.com.cn/videocenter/" target="_blank">视频中心</a>
+			            </div>
+			        </div> -->
+
+			        <!-- 服务 -->
+<!-- 			        <div class="link_div">
+			            <a href="http://kf.cakeface.com.cn/" target="_blank" id="link_nav5" class="link_nav">
+			                <span>服务</span>
+			                <span class="link_nav_e">SERVICE</span>
+			            </a>
+			            <div class="link_pop">
+			                <a href="http://kf.cakeface.com.cn" target="_blank">客服中心</a>
+			                <a href="http://cs.wanmei.com/genius?imCode=imdotagames" target="_blank">在线客服</a>
+			                <a href="http://cs.wanmei.com/getServicesByGameType?gametype=22" target="_blank">自助专区</a>
+			                <a href="http://bbs.cakeface.com.cn/forum.php?mod=viewthread&tid=1250459" target="_blank">被盗找回</a>
+			                <a href="http://bbs.cakeface.com.cn/forum.php?mod=viewthread&tid=1245751" target="_blank">忘记账号</a>
+			                <a href="http://members.cakeface.com.cn/findPwAccount" target="_blank">通行证查询</a>
+			            </div>
+			        </div> -->
+
+			        <!-- 下载 -->
+<!-- 			        <div class="link_div">
+			            <a href="http://www.cakeface.com.cn/download/" target="_blank" id="link_nav6" class="link_nav">
+			                <span>下载</span>
+			                <span class="link_nav_e">DOWNLOAD</span>
+			            </a>
+			            <div class="link_pop">
+			                <a href="http://www.cakeface.com.cn/download/" target="_blank">游戏下载</a>
+			                <a href="http://app.cakeface.com.cn/web.html" target="_blank">刀塔助手</a>
+			                <a href="http://www.cakeface.com.cn/enjoy/gamewall/index.htm" target="_blank">精美壁纸</a>
+			                <a href="http://www.cakeface.com.cn/comics/index.htm" target="_blank">官方漫画</a>
+			            </div>
+			        </div> -->
+	    		</div>
+
+	    		<!-- 用户 -->
+		    	<div class="cakefaceuser" id="cakefaceuser">
+			        <div class="info">
+			            <i class="nav-avatar avatar-default"></i>
+			                <div class="enter-box">
+			                    <p class="name">
+			                        <span>您好，请&nbsp;</span><a href="javascript:;" id="J_cakefaceSignIn">登录</a>
+			                    </p>
+			                    <span class="tt">登录后可进入您的个人中心</span>
+			                </div>
+			        </div>
+			    </div>
+
+			<!-- overlay -->
+			<div id="cakeface_overlay"  style="display: none;">
+
+
+			</div>
+
+
+			</div>
+
+			<!-- wx -->
+				<div class="nav_wxdialog" id="j-navwxdialog" style="display:none;">
+							    <h4>扫一扫关注Cakeface官方微信公众平台</h4>
+							    <p>获取更多最新的Cakeface精彩资讯！</p>
+							    <ul>
+							        <li class="subscribe">
+							            <i></i>
+							            <span>cakeface官方微信服务号</span>
+							        </li>
+							        <li class="vservice">
+							            <i></i>
+							            <span>cakeface官方微信订阅号</span>
+							        </li>
+							    </ul>
+							    <a href="#" class="close" id="j-wxclose" onclick="wxclose()"></a>
+							</div>			
+
+
+		</div>
+
+	</body>
+
+
+
+</html>
