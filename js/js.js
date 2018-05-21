@@ -4,37 +4,37 @@
 window.onload = function () {
     var arr = [
         {   //  1
-            width:400,
-            top:70,
-            left:50,
+            width:320,
+            top:56,
+            left:40,
             opacity:20,
             zIndex:2
         },
         {  // 2
-            width:600,
-            top:120,
+            width:480,
+            top:96,
             left:0,
             opacity:80,
             zIndex:3
         },
         {   // 3
-            width:800,
-            top:100,
-            left:200,
+            width:640,
+            top:20,
+            left:160,
             opacity:100,
             zIndex:4
         },
         {  // 4
-            width:600,
-            top:120,
-            left:600,
+            width:480,
+            top:96,
+            left:480,
             opacity:80,
             zIndex:3
         },
         {   //5
-            width:400,
-            top:70,
-            left:750,
+            width:320,
+            top:56,
+            left:600,
             opacity:20,
             zIndex:2
         }
@@ -47,6 +47,7 @@ window.onload = function () {
     var arrowChildren = arrow.children;
     //设置一个开闭原则变量，点击以后修改这个值。
     var flag = true;
+
 
     //1.鼠标放到轮播图上，两侧的按钮显示，移开隐藏。
     slide.onmouseenter = function () {
@@ -90,5 +91,7 @@ window.onload = function () {
             });
         }
     }
+
+
 
 }

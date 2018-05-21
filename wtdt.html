@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页面</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/news.css">
+    <link rel="stylesheet" type="text/css" href="css/cookbox.css">
+	<script src="js/jquery1.0.0.1.js"></script>
+    <script src="js/js.js"></script>
+
+	<script type="text/javascript">
+
+	    // 互动 作者微信 显示关闭函数
+	    function wxdialog() {
+	        var wxdialog = document.getElementById("j-navwxdialog");
+	        var overlay = document.getElementById("cakeface_overlay");
+	        wxdialog.style.display="block";
+	        overlay.style.display="block";
+	    }
+	    function wxclose() {
+	        var wxdialog = document.getElementById("j-navwxdialog");
+	        var overlay = document.getElementById("cakeface_overlay");
+	        wxdialog.style.display="none";
+	        overlay.style.display="none";
+	    }
+
+	    function logindialog() {
+	        var logindialog = document.getElementById("div_login");
+	        var overlay = document.getElementById("cakeface_overlay");
+	        logindialog.style.display="block";
+	        overlay.style.display="block";
+	    }
+	    function loginclose() {
+	        var logindialog = document.getElementById("div_login");
+	        var overlay = document.getElementById("cakeface_overlay");
+	        logindialog.style.display="none";
+	        overlay.style.display="none";
+	    }
+	</script>
+
+
+</head>
+	<body>
+	    <div id="cakeface_topnav" class="cakeface_nav_container">
+	        <div class="nav_main clearfix">
+
+				<!-- logo -->
+	    		<a href="index.html" title="cakeface官方网站" class="nav_logo" target="_blank">cakeface官方网站</a>
+				
+				<!-- 导航条 -->
+	    		<div class="cakefacenav" id="cakefacenav">
+
+					<!-- 首页 -->
+		        	<div class="link_div">
+		            	<a href="index.html"   id=" link_nav1" class="link_nav">
+		                	<span>首页</span>
+		                	<span class="link_nav_e">HOME</span>
+		            	</a>
+		        	</div>
+
+					<!-- 资讯 -->
+			        <div class="link_div">
+			            <a href="#" id="link_nav2" class="link_nav" >
+			                <span>甜点资讯</span>
+			                <span class="link_nav_e">NEWS</span>
+			            </a>
+			            <div class="link_pop">
+			                <a href="#" target="_blank">今日推荐</a>
+			                <a href="#" target="_blank">吃货攻略</a>
+			            </div>
+			        </div>
+
+			        <!-- 分类 -->
+			        <div class="link_div">
+			            <a href="#" id="link_nav3" class="link_nav" target="_blank">
+			                <span>甜点菜谱</span>
+			                <span class="link_nav_e" style="margin-left: 0px;">SORT</span>
+			            </a>
+			            <div class="link_pop">
+			                <a href="cndt.html" target="">中式甜点</a>
+			                <a href="wtdt.html" target="">西式甜点</a>
+			                <a href="#" target="_blank">其他</a>
+			            </div>
+			        </div>
+
+			        <!-- 互动 -->
+			        <div class="link_div">
+			            <a href="http://www.cakeface.com.cn/activity/all/index.htm" id="" class="link_nav" target="_blank">
+			                <span>互动</span>
+			                <span class="link_nav_e">INTERACTION</span>
+			            </a>
+			            <div class="link_pop">
+			                <a href="http://bbs.cakeface.com.cn/forum.php" target="_blank">吃货论坛</a>
+			                <a href="#" id="j-navwxlink" onclick="wxdialog()">作者微信</a>
+			            </div>
+			        </div>
+	    		</div>
+
+
+	    		<!-- 用户 -->
+		    	<div class="cakefaceuser" id="cakefaceuser">
+			        <div class="info">
+			            <i class="nav-avatar avatar-default"></i>
+			                <div class="enter-box">
+			                    <p class="name">
+			                        <span>您好，请&nbsp;</span><a href="#" id="cakefaceSignIn" onclick="logindialog()">登录</a>
+			                    </p>
+			                    <span class="tt">登录后可进入您的个人中心</span>
+			                </div>
+			        </div>
+			    </div>
+
+			<!-- overlay -->
+				<div id="cakeface_overlay"  style="display: none;">
+				</div>
+			</div>
+
+			<!-- wx -->
+			<div class="nav_wxdialog" id="j-navwxdialog" style="display:none;">
+				<h4>扫一扫关注Cakeface官方微信公众平台</h4>
+				<p>获取更多最新的Cakeface精彩资讯！</p>
+				<ul>
+				<li class="subscribe">
+					<i></i>
+					<span>cakeface官方微信服务号</span>
+					</li>
+				<li class="vservice">
+					<i></i>
+					<span>cakeface官方微信订阅号</span>
+				</li>
+				</ul>
+				<a href="#" class="close"  onclick="wxclose()"></a>
+			</div>			
+
+			<!--login -->
+			<div class="div_logindialog" id="div_login" style="display:none;">
+				<h4>登录</h4>
+				<form action="">
+				</form>
+				<a href="#" class="close" onclick="loginclose()"></a>
+			</div>		
+		</div>
+
+
+
+	<div id="container_wt" class="clearfix" style="margin-top: 30px;">        
+	    <div class="cp_box">
+    		<a href="http://www.douguo.com/cookbook/1347365.html" class="cp_pic" target="_blank">
+       		<img src="https://cp1.douguo.com/upload/caiku/a/b/c/400x266_ab563da9a650f7276fc2e8ae182d5a5c.jpg" alt="无水无油不回缩不开裂-纸杯蛋糕">
+            </a>
+   			<div  class="cp_msg">
+	        	<a class="cp_name" target="_blank" href="http://www.douguo.com/cookbook/1347365.html">无水无油不回缩不开裂-纸杯蛋糕</a>
+	        	<p class="cp_cate">517944浏览 · 29874收藏 · 585已学做</p>
+	        	<a class="cp_author" target="_blank" href="http://www.douguo.com/u/u20935703262409.html">
+	            	<img src="https://i1.douguo.com/upload/photo/9/1/6/70_u20935703262409222839.jpeg"/>            
+	           		阅宝麻麻        
+	           	</a>
+	        	<span class="level_icon"><a href='/user/prodesc' class='picon progr' rel='nofollow' target='_blank' title='豆果美食达人认证'></a></span>
+	        	<div class="cp_tag">
+					<a target="_blank" href="/caipu/烘焙">烘焙</a>
+					<a target="_blank" href="/caipu/烤箱食谱">烤箱食谱</a>
+					<a target="_blank" href="/caipu/烤">烤</a>
+					<a target="_blank" href="/caipu/下午茶">下午茶</a>
+					<a target="_blank" href="/caipu/朋友聚餐">朋友聚餐</a>
+					<a target="_blank" href="/caipu/西餐">西餐</a>
+				</div>
+    		</div>
+		</div>
+		<div class="cp_box">
+    <a href="http://www.douguo.com/cookbook/771822.html" class="cp_pic" target="_blank">
+        <img src="https://cp1.douguo.com/upload/caiku/9/a/7/400x266_9a278f5944fef8b3652ea3ff7ccfcd57.jpg" alt="【轻乳酪蛋糕】长帝首款3.5版电烤箱CKTF-32GS试用">
+        <span class="icon_video" title="这道菜谱有视频哟"></span>            </a>
+    <div  class="cp_msg">
+        <a class="cp_name" target="_blank" href="http://www.douguo.com/cookbook/771822.html">【轻乳酪蛋糕】长帝首款3.5版电烤箱CKTF-32GS试用</a>
+        <p class="cp_cate">773594浏览 · 50047收藏 · 1294已学做</p>
+        <a class="cp_author" target="_blank" href="http://www.douguo.com/u/u28791893525090.html">
+            <img src="https://i1.douguo.com/upload/photo/6/5/6/70_u2879189352509007121341.jpg"/>            
+            冰清一色        </a>
+        <span class="level_icon"><a href='/user/prodesc' class='picon progr' rel='nofollow' target='_blank' title='豆果美食达人认证'></a></span>
+        <div class="cp_tag">
+						<a target="_blank" href="/caipu/烘焙">烘焙</a>
+						<a target="_blank" href="/caipu/下午茶">下午茶</a>
+						<a target="_blank" href="/caipu/烤箱食谱">烤箱食谱</a>
+						<a target="_blank" href="/caipu/烤">烤</a>
+						<a target="_blank" href="/caipu/西餐">西餐</a>
+			        </div>
+    </div>
+</div>
+<div class="cp_box">
+    <a href="http://www.douguo.com/cookbook/965395.html" class="cp_pic" target="_blank">
+        <img src="https://cp1.douguo.com/upload/caiku/8/2/f/400x266_82289fc855a37797e0d0e58363d4d90f.jpg" alt="经典重芝士蛋糕">
+        <span class="icon_video" title="这道菜谱有视频哟"></span>            </a>
+    <div  class="cp_msg">
+        <a class="cp_name" target="_blank" href="http://www.douguo.com/cookbook/965395.html">经典重芝士蛋糕</a>
+        <p class="cp_cate">1885158浏览 · 49049收藏 · 644已学做</p>
+        <a class="cp_author" target="_blank" href="http://www.douguo.com/u/u08363793.html">
+            <img src="https://i1.douguo.com/upload/photo/d/c/f/70_u0836379302081643.jpg"/>            
+            君之        </a>
+        <span class="level_icon"><a href='/user/prodesc' class='picon progr' rel='nofollow' target='_blank' title='豆果美食达人认证'></a></span>
+        <div class="cp_tag">
+						<a target="_blank" href="/caipu/烘焙">烘焙</a>
+						<a target="_blank" href="/caipu/烤箱食谱">烤箱食谱</a>
+						<a target="_blank" href="/caipu/下午茶">下午茶</a>
+						<a target="_blank" href="/caipu/早餐食谱">早餐食谱</a>
+						<a target="_blank" href="/caipu/宵夜">宵夜</a>
+						<a target="_blank" href="/caipu/单身食谱">单身食谱</a>
+						<a target="_blank" href="/caipu/二人世界">二人世界</a>
+						<a target="_blank" href="/caipu/生日聚会">生日聚会</a>
+						<a target="_blank" href="/caipu/西餐">西餐</a>
+			        </div>
+    </div>
+</div>
+<div class="cp_box">
+    <a href="http://www.douguo.com/cookbook/1403435.html" class="cp_pic" target="_blank">
+        <img src="https://cp1.douguo.com/upload/caiku/7/c/1/400x266_7c6c0e4fbf67f88fff88098e444ff451.jpg" alt="酸奶冻芝士蛋糕">
+        <span class="icon_video" title="这道菜谱有视频哟"></span>            </a>
+    <div  class="cp_msg">
+        <a class="cp_name" target="_blank" href="http://www.douguo.com/cookbook/1403435.html">酸奶冻芝士蛋糕</a>
+        <p class="cp_cate">274766浏览 · 16009收藏 · 86已学做</p>
+        <a class="cp_author" target="_blank" href="http://www.douguo.com/u/u61739503754198.html">
+            <img src="https://i1.douguo.com/upload/photo/9/5/3/70_u6173950375419805062117.jpg"/>            
+            灵动美食        </a>
+        <span class="level_icon"><a href='/user/prodesc' class='picon progr' rel='nofollow' target='_blank' title='豆果美食达人认证'></a></span>
+        <div class="cp_tag">
+						<a target="_blank" href="/caipu/甜品">甜品</a>
+						<a target="_blank" href="/caipu/烘焙">烘焙</a>
+						<a target="_blank" href="/caipu/小吃">小吃</a>
+						<a target="_blank" href="/caipu/甜">甜</a>
+						<a target="_blank" href="/caipu/香">香</a>
+						<a target="_blank" href="/caipu/下午茶">下午茶</a>
+						<a target="_blank" href="/caipu/朋友聚餐">朋友聚餐</a>
+						<a target="_blank" href="/caipu/生日聚会">生日聚会</a>
+						<a target="_blank" href="/caipu/拌">拌</a>
+						<a target="_blank" href="/caipu/西餐">西餐</a>
+						<a target="_blank" href="/caipu/酸甜">酸甜</a>
+			        </div>
+    </div>
+</div>
+<div class="cp_box">
+    <a href="http://www.douguo.com/cookbook/1160791.html" class="cp_pic" target="_blank">
+        <img src="https://cp1.douguo.com/upload/caiku/0/0/e/400x266_009875273fede4aa1d4a4d49af248e9e.jpg" alt="入口即化轻芝士蛋糕（轻乳酪蛋糕）">
+        <span class="icon_video" title="这道菜谱有视频哟"></span>            </a>
+    <div  class="cp_msg">
+        <a class="cp_name" target="_blank" href="http://www.douguo.com/cookbook/1160791.html">入口即化轻芝士蛋糕（轻乳酪蛋糕）</a>
+        <p class="cp_cate">717329浏览 · 32634收藏 · 919已学做</p>
+        <a class="cp_author" target="_blank" href="http://www.douguo.com/u/u28662062657044.html">
+            <img src="https://i1.douguo.com/upload/photo/2/4/a/70_u28662062657044183629.jpg"/>            
+            ssssandy        </a>
+        <span class="level_icon"></span>
+        <div class="cp_tag">
+						<a target="_blank" href="/caipu/烘焙">烘焙</a>
+						<a target="_blank" href="/caipu/下午茶">下午茶</a>
+						<a target="_blank" href="/caipu/烤箱食谱">烤箱食谱</a>
+						<a target="_blank" href="/caipu/烤">烤</a>
+						<a target="_blank" href="/caipu/甜">甜</a>
+						<a target="_blank" href="/caipu/香">香</a>
+						<a target="_blank" href="/caipu/朋友聚餐">朋友聚餐</a>
+						<a target="_blank" href="/caipu/一家三口">一家三口</a>
+						<a target="_blank" href="/caipu/西餐">西餐</a>
+			        </div>
+    </div>
+</div>
+<div class="cp_box">
+    <a href="http://www.douguo.com/cookbook/1066947.html" class="cp_pic" target="_blank">
+        <img src="https://cp1.douguo.com/upload/caiku/1/9/b/400x266_1914f248f3eb0d23336a771dcb6e7abb.jpg" alt="·奥利奥冻芝士蛋糕·零失误的完美下午茶">
+        <span class="icon_video" title="这道菜谱有视频哟"></span>            </a>
+    <div  class="cp_msg">
+        <a class="cp_name" target="_blank" href="http://www.douguo.com/cookbook/1066947.html">·奥利奥冻芝士蛋糕·零失误的完美下午茶</a>
+        <p class="cp_cate">740696浏览 · 54240收藏 · 786已学做</p>
+        <a class="cp_author" target="_blank" href="http://www.douguo.com/u/u86932915901897.html">
+            <img src="https://i1.douguo.com/upload/photo/a/4/a/70_u86932915901897195935.jpg"/>            
+            泡菜炖肉        </a>
+        <span class="level_icon"><a href='/user/prodesc' class='picon progr' rel='nofollow' target='_blank' title='豆果美食达人认证'></a></span>
+        <div class="cp_tag">
+						<a target="_blank" href="/caipu/烘焙">烘焙</a>
+						<a target="_blank" href="/caipu/下午茶">下午茶</a>
+						<a target="_blank" href="/caipu/拌">拌</a>
+						<a target="_blank" href="/caipu/甜">甜</a>
+						<a target="_blank" href="/caipu/奶香">奶香</a>
+						<a target="_blank" href="/caipu/西餐">西餐</a>
+			        </div>
+    </div>
+</div>
+
+
+
+	</body>
+
+
+
+</html>

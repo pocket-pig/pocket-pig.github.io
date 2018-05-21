@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册表</title>
+	<style>
+		html,body
+		{
+			font-size: 16px;
+			font-family: "微软雅黑";
+			width: 100%;
+			height: 99%;
+			margin: 0px;
+			border: 0px;
+		}
+		#box{
+			position: relative;
+			width: 360px;
+			height: 640px;
+			left: 50%;
+			top: 50%;
+			margin-top: -320px;
+			margin-left: -180px;
+			box-shadow: 0 1px 3px rgba(34,25,25,0.5);
+			-moz-box-shadow: 0 1px 2px rgba(34,25,25,0.5);
+			-webkit-box-shadow: 0 1px 3px rgba(34,25,25,0.5);
+		}
+
+		form{
+			margin: 10px;
+		}
+		
+	</style>
+	<script type="text/javascript">
+                var arr = new Array(2);
+                arr[0] = ["广东省","东莞市","广州市","中山市","深圳市","惠州市","江门市","珠海市","汕头市","佛山市","湛江市","河源市","肇庆市","潮州市","韶关市","揭阳市","阳江市","云浮市","茂名市","梅州市","汕尾市"];
+                arr[1] = ["山东省","济南市","青岛市","临沂市","济宁市","菏泽市","烟台市","泰安市","淄博市","潍坊市","日照市","威海市","滨州市","东营市","聊城市","德州市","莱芜市","枣庄市"];
+                arr[2] = ["江苏省","徐州市","盐城市","无锡市","南京市","南通市","连云港市","常州市","扬州市","镇江市","淮安市","泰州市","宿迁市"];
+                arr[3] = ["河南省","郑州市","南阳市","新乡市","安阳市","洛阳市","信阳市","平顶山市","周口市","商丘市","开封市","焦作市","驻马店市","濮阳市","三门峡市","漯河市","许昌市","鹤壁市","济源市"];
+                arr[4] = ["河北省","石家庄市","唐山市","保定市","邯郸市","邢台市","河北区","沧州市","秦皇岛市","张家口市","衡水市","廊坊市","承德市"];
+                arr[5] = ["浙江省","温州市","宁波市","杭州市","台州市","嘉兴市","金华市","湖州市","绍兴市","舟山市","丽水市","衢州市"];
+                arr[6] = ["陕西省","西安市","咸阳市","宝鸡市","汉中市","渭南市","安康市","榆林市","商洛市","延安市","铜川市"];
+                arr[7] = ["湖南省","长沙市","邵阳市","常德市","衡阳市","株洲市","湘潭市","永州市","岳阳市","怀化市","郴州市","娄底市","益阳市","张家界市","湘西州"];
+              	arr[8] = ["福建省","漳州市","泉州市","厦门市","福州市","莆田市","宁德市","三明市","南平市","龙岩市"];
+              	arr[9] = ["云南省","昆明市","红河州","大理州","德宏州","曲靖市","昭通市","楚雄州","保山市","玉溪市","丽江地区","临沧地区","思茅地区","西双版纳州","怒江州","迪庆州"];
+              	arr[10] = ["四川省","成都市","绵阳市","广元市","达州市","南充市","德阳市","广安市","阿坝州","巴中市","遂宁市","内江市","凉山州","攀枝花市","乐山市","自贡市","泸州市","雅安市","宜宾市","资阳市","眉山市","甘孜州"];
+              	arr[11] = ["广西壮族自治区","贵港市","玉林市","北海市","南宁市","柳州市","桂林市","梧州市","钦州市","来宾市","河池市","百色市","贺州市","崇左市","防城港市"];
+              	arr[12] = ["安徽省","芜湖市","合肥市","六安市","宿州市","阜阳市","安庆市","马鞍山市","蚌埠市","淮北市","淮南市","宣城市","黄山市","铜陵市","亳州市","池州市","巢湖市","滁州市"];
+              	arr[13] = ["海南省","三亚市","海口市","琼海市","文昌市","东方市","昌江县","陵水县","乐东县","五指山市","保亭县","澄迈县","万宁市","儋州市","临高县","白沙县","定安县","琼中县","屯昌县"];
+              	arr[14] = ["江西省","南昌市","赣州市","上饶市","吉安市","九江市","新余市","抚州市","宜春市","景德镇市","萍乡市","鹰潭市"];
+              	arr[15] = ["湖北省","武汉市","宜昌市","襄樊市","荆州市","恩施州","孝感市","黄冈市","十堰市","咸宁市","黄石市","仙桃市","随州市","天门市","荆门市","潜江市","鄂州市","神农架林区"];
+              	arr[16] = ["山西省","太原市","大同市","运城市","长治市","晋城市","忻州市","临汾市","吕梁市","晋中市","阳泉市","朔州市"];
+              	arr[17] = ["辽宁省","大连市","沈阳市","丹东市","辽阳市","葫芦岛市","锦州市","朝阳市","营口市","鞍山市","抚顺市","阜新市","本溪市","盘锦市","铁岭市"];
+              	arr[18] = ["台湾省","台北市","高雄市","台中市","新竹市","基隆市","台南市","嘉义市"];
+              	arr[19] = ["黑龙江省","齐齐哈尔市","哈尔滨市","大庆市","佳木斯市","双鸭山市","牡丹江市","鸡西市","黑河市"," 绥化市","鹤岗市","伊春市","大兴安岭地区","七台河市"];
+              	arr[20] = ["内蒙古自治区","赤峰市","包头市","通辽市","呼和浩特市","乌海市","鄂尔多斯市","呼伦贝尔市","兴安盟","巴彦淖尔盟","乌兰察布盟","锡林郭勒盟","阿拉善盟"];
+                arr[21] = ["贵州省","贵阳市","黔东南州","黔南州","遵义市","黔西南州","毕节地区","铜仁地区","安抚市","六盘水市"];
+                arr[22] = ["甘肃省","兰州市","天水市","庆阳市","武威市","酒泉市","张掖市","陇南地区","白银市","定西地区","平凉市","嘉峪关市","临夏回族自治州","金昌市","甘南州"];
+                arr[23] = ["青海省","西宁市","海西州","海东地区","海北州","果洛州","玉树州","黄南藏族自治州"];
+                arr[24] = ["新疆维吾尔自治区","乌鲁木齐市","伊犁州","昌吉州","石河子市","哈密地区","阿克苏地区","巴音郭楞州","喀什地区","塔城地区","和田地区","阿勒泰州","吐鲁番地区","阿拉尔市","博尔塔拉州","五家渠市","克孜勒苏州","图木舒克市"];
+                arr[25] = ["西藏区","拉萨市","山南地区","林芝地区","日喀则地区","阿里地区","昌都地区","那曲地区"];
+                arr[26] = ["吉林省","长春市","白山市","白城市","延边州","松原市","辽源市","通化市","四平市"];
+                arr[27] = ["宁夏回族自治区","银川市","吴忠市","中卫市","石嘴山市","固原市"];
+                arr[28] = ["北京市"];
+                arr[29] = ["上海市"];
+                arr[30] = ["香港特别行政区"];
+                arr[31] = ["重庆市"];
+                arr[32] = ["天津市"];
+                arr[33] = ["澳门特别行政区"]
+                
+                function choose(val){
+                    var city = document.getElementById("city");
+                    var cityOp = city.getElementsByTagName("option");
+                    city.disabled = false;
+                    for (var i = 0; i < cityOp.length; i++) {
+                        var op = cityOp[i];
+                        city.removeChild(op);
+                        i--;
+                    }
+
+                    for (var i = 0; i < arr.length; i++) {
+                        var arr1 = arr[i];
+                        var firstVal = arr1[0];
+                        if(firstVal == val){
+                            for (var j = 1; j < arr1.length; j++) {
+                                var value = arr1[j];
+                                var optionl = document.createElement("option");
+                                var textl = document.createTextNode(value);
+                                optionl.appendChild(textl);
+                                city.appendChild(optionl);
+                            }
+                        }
+                    }
+                }
+	</script>
+
+
+</head>
+<body>
+	
+	<div id="box" >
+		<div>
+			<h3 align="center">注册表</h3>
+		</div>
+	<form action="注册表.php" method="get">
+			
+				<p>
+					<span class="span1">登录账号&nbsp;:</span>
+					<input type="text" name="user_name" value="myemail@163.com" required>
+					(必须填写)			
+				</p>
+				<p>
+					<span class="span1">真实姓名&nbsp;:</span>
+					<input type="text" name="real_name" pattern="^[\u4e00-\u9fa5]{0,}$" placeholder="例如:小明" required autofocus>
+					(必须填写,只能输入汉字)			
+				</p>
+				<p>
+					<span class="span1">真实年龄&nbsp;:</span>
+					<input type="number" name="real_age" value="24" min="15" max="120" required>
+					(必须填写)			
+				</p>
+
+				<p>
+					<span class="span1">出生日期&nbsp;	:</span>
+					<input type="date" name="birthday" value="1990-10-1" required>
+					(必须填写)
+				</p>
+				<p>
+					<span class="span1">电子邮箱&nbsp;:</span>
+					<input type="email" name="myemail" placeholder="123456@163.com" required multiple>
+					(必须填写)			
+				</p>
+				<p>
+					<span class="span1">身份证号&nbsp;:</span>
+					<input type="text" name="card" required pattern="^\d{8,18}|[0-9x]{8,18}|[0-9X]{8,18}?$">
+					<br>(必须填写,能够以数字、字母x结尾的段身份证号)
+				</p>
+
+				<p>
+					<span class="span1">手机号码&nbsp;:</span>
+					<input type="tel" name="telephone" pattern="^\d{11}$" required>
+					(必须填写)				
+				</p>
+				<p>
+					<span class="span1">个人主页&nbsp;:</span>
+					<input type="url" name="myurl" list="urllist" placeholder="http://www.itcast.cn" pattern="^http://([\w-]+\.)+[\w-]+(/[\w-./?%&=]*)?$">
+					(请选择网址)
+					<datalist id="urllist">
+						<option>http://www.itcast.cn</option>
+						<option>http://www.boxuegu.com</option>
+						<option>http://www.w3school.com.cn</option>
+					</datalist>
+				</p>
+				<p>
+					<span class="span1">留&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;言&nbsp;:</span>
+					<input type="text" name="comments" required>
+					(必须填写)			
+				</p>
+
+				<p class="lucky">
+					<span class="span1">幸运颜色:</span>
+					<input type="color" name="lovecolor" value="#fed000">
+					(请选择你喜欢的颜色)
+				</p>
+				<p>
+					<span class="span1">省:</span>
+					<select id="province" name="province" onchange="choose(this.value)">
+	            		<option value="0">请选择省</option>
+	            		<option value="广东省">广东省</option>
+	            		<option value="山东省">山东省</option>
+	            		<option value="江苏省">江苏省</option>
+	            		<option value="河南省">河南省</option>
+	            		<option value="河北省">河北省</option>
+	            		<option value="浙江省">浙江省</option>
+	            		<option value="陕西省">陕西省</option>
+	            		<option value="湖南省">湖南省</option>
+	            		<option value="福建省">福建省</option>
+	            		<option value="云南省">云南省</option>
+	            		<option value="四川省">四川省</option>
+	            		<option value="广西壮族自治区">广西壮族自治区</option>
+	            		<option value="安徽省">安徽省</option>
+	            		<option value="海南省">海南省</option>
+	            		<option value="江西省">江西省</option>
+	            		<option value="湖北省">湖北省</option>
+	            		<option value="山西省">山西省</option>
+	            		<option value="辽宁省">辽宁省</option>
+	            		<option value="台湾省">台湾省</option>
+	            		<option value="黑龙江省">黑龙江省</option>
+	            		<option value="内蒙古自治区">内蒙古自治区</option>
+						<option value="贵州省">贵州省</option>
+						<option value="甘肃省">甘肃省</option>
+						<option value="青海省">青海省</option>
+						<option value="新疆维吾尔自治区">新疆维吾尔自治区</option>
+						<option value="西藏区">西藏区</option>
+						<option value="吉林省">吉林省</option>
+						<option value="宁夏回族自治区">宁夏回族自治区</option>
+	            		<option value="北京市">北京市</option>
+	            		<option value="上海市">上海市</option>
+	            		<option value="香港特别行政区">香港特别行政区</option>
+	            		<option value="重庆市">重庆市</option>
+	            		<option value="天津市">天津市</option>
+	            		<option value="澳门特别行政区">澳门特别行政区</option>
+	        		</select>
+	        		(必须填写)
+	        		<br>
+	        		<span class="span1">市:</span>
+	        		<select id="city" name="city" disabled="disabled">
+	            		<option value="0">请选择市</option>
+	        		</select>
+	        		(必须填写)
+				</p>
+				<p class="hobby">
+					<div id="hobby_div">
+						<span class="span1" id="hobby1">爱好:</span>
+						<input name="hobby[]" type="checkbox" value="游泳" />游泳
+						<input name="hobby[]" type="checkbox" value="乒乓球"/>乒乓球
+						<input name="hobby[]" type="checkbox" value="舞蹈"/>舞蹈
+						<span class="span1" id="hobby2">(多选项)</span>
+					</div>
+				</p>
+
+
+			<p class="btn" align="center">
+				<input type="submit" value="提交">
+				<input type="reset" value="重置">
+			</p>
+	</form>
+
+	</div>
+
+
+
+
+</body>
+</html>

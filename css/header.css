@@ -1,4 +1,4 @@
-﻿		
+﻿
 		.cakeface_nav_container {
 		    width: 100%;
 		    height: 80px;
@@ -27,58 +27,6 @@
 		    height: 100%;
 		    width: 1200px;
 		    margin: 0 auto;
-		}
-
-
-		/*icon小图标*/
-		.nav_main .nav_icon {
-		    display: inline-block;
-		    width: 16px;
-		    height: 15px;
-		    margin-right: 5px;
-		    vertical-align: middle;
-		    background: url('../img/icons.png') no-repeat top center;
-		}
-
-		.nav_icon.icon-user {
-		    width: 30px;
-		    height: 30px;
-		    margin-right: 5px;
-		    border-radius: 100%;
-		    border: 1px solid transparent;
-		    background-position: -2px -297px;
-		}
-
-		.nav_icon.icon-close {
-		    background-position: -1px -400px;
-		}
-
-		.nav_icon.icon-help {
-		    background-position: -3px -73px;
-		}
-
-		.nav_icon.icon-reg {
-		    background-position: -5px -270px;
-		}
-
-		.nav_icon.icon-reg-active {
-		    background-position: -4px -240px;
-		}
-
-		.nav_icon.icon-mobile {
-		    background-position: -2px -210px;
-		}
-
-		.nav_icon.icon-mobile-active {
-		    background-position: -2px -180px;
-		}
-
-		.nav_icon.icon-email {
-		    background-position: -4px -152px;
-		}
-
-		.nav_icon.icon-email-active {
-		    background-position: -4px -152px;
 		}
 
 
@@ -171,5 +119,243 @@
 		/*标签蓝色*/
 		.nav_main .cakefacenav .link_div .link_pop a:hover {
 		    color: #00c0ff;
+		}
+
+
+		/*
+		 *  user login
+		 */
+		.nav_main .cakefaceuser {
+		    float: right;
+		    width: 234px;
+		    height: 100%;
+		    margin-right: 0;
+		    color: #ccc;
+		    position: relative;
+		}
+
+		.nav_main .cakefaceuser .info {
+		    padding-left: 65px;
+		    height: 100%;
+		}
+
+		.nav_main .cakefaceuser .info-st {
+		    padding: 3px 0 0 60px;
+		    height: 100%;
+		}
+
+		.nav_main .cakefaceuser .nav-avatar {
+		    position: absolute;
+		    width: 50px;
+		    height: 50px;
+		    left: 0;
+		    top: 13px;
+		    border-radius: 50%;
+		    border: 1px solid #262323;
+		    background-color: #101215;
+		    box-sizing: content-box;
+		}
+		.nav_main .cakefaceuser .info-st .nav-avatar {
+		    left: -10px;
+		}
+
+		.nav_main .cakefaceuser .avatar-default {
+		   /* background-color: #101215;*/
+		   background-color: white;
+		    background-image: url('../img/蛋糕_1.png');
+		   /* background-position: 100px 100px;*/
+			background-size: contain;
+
+		}
+		.nav_main .cakefaceuser .enter-box{
+		    margin-top: 17px;
+		    display: block;
+		}
+		.nav_main .cakefaceuser .info-st .enter-box {
+		    margin-top: 16px;
+		}
+		.nav_main_loged .nav_main .cakefaceuser .enter-box,
+		.nav_main.nav_main_loged .cakefaceuser .enter-box{
+		    margin-top: 20px;
+		}
+		.nav_main_loged .nav_main .cakefaceuser .info-st .enter-box,
+		.nav_main.nav_main_loged .cakefaceuser .info-st .enter-box {
+		    margin-top: 16px;
+		}
+
+		.nav_main .cakefaceuser .enter-box b{
+		    font-weight: 400;
+		    font-family: 'Microsoft YaHei';
+		}
+		.nav_main .cakefaceuser .name {
+		    font-size: 18px;
+		    color: #00b7f4;
+		    line-height: 1.2;
+		    text-overflow:ellipsis;
+		    overflow:hidden;
+		    white-space:nowrap;
+		    margin: 0;
+		    margin-bottom: 3px;
+		}
+		.nav_main_loged .nav_main .cakefaceuser .name,
+		.nav_main.nav_main_loged .cakefaceuser .name{
+		    margin-bottom: 0;
+		}
+		.nav_main .cakefaceuser .info-st .name {
+		    font-size: 14px;
+		    font-family: "Microsoft YaHei",Verdana,Geneva,sans-serif,\5b8b\4f53;
+		}
+		.nav_main .cakefaceuser .name span{
+		    color: #fff;
+		    font-family: "Microsoft YaHei",Verdana,Geneva,sans-serif,\5b8b\4f53;
+		}
+		.nav_main .cakefaceuser .name .name-info{
+		    display: block;
+		    margin-bottom: 8px;
+		}
+		.nav_main .cakefaceuser .name a {
+		    color: #00b7f4;
+		}
+		.nav_main .cakefaceuser .name a:hover {
+		    text-decoration: underline;
+		}
+		.nav_main .cakefaceuser .tt {
+		    font-size: 12px;
+		    color: #898989;
+		    padding: 0;
+		    line-height: 1.5;
+		    font-family: "Microsoft YaHei",Verdana,Geneva,sans-serif,\5b8b\4f53;
+		}
+
+		.nav_wxdialog {
+		    position: fixed;
+		    z-index: 1004;
+		    width: 620px;
+		    height: 385px;
+		    left: 50%;
+		    top: 50%;
+		    margin: -192px 0 0 -310px;
+		    background: #2a282c url(../img/navwx_bg.jpg) no-repeat top center;
+		    text-align: center;
+		    color: #fff;
+		}
+
+		.nav_wxdialog h4 {
+		    font-size: 20px;
+		    font-weight: bold;
+		    margin: 54px 0 14px 0;
+		}
+
+		.nav_wxdialog p {
+		    font-size: 16px;
+		    margin-bottom: 45px;
+		    color: #999999;
+		}
+
+		.nav_wxdialog li {
+		    display: inline-block;
+		    width: 156px;
+		    height: 196px;
+		    margin: 0 20px;
+		}
+
+		.nav_wxdialog li i {
+		    display: block;
+		    width: 156px;
+		    height: 156px;
+		    background-color: #fff;
+		}
+
+		.nav_wxdialog .subscribe i {
+		    background-image: url(../img/navwx_subscribe1.png);
+		}
+
+		.nav_wxdialog .vservice i {
+		    background-image: url(../img/navwx_vservice1.png);
+		}
+
+		.nav_wxdialog li span {
+		    font-size: 14px;
+		    line-height: 40px;
+		}
+
+		.nav_wxdialog .close {
+		    position: absolute;
+		    width: 60px;
+		    height: 60px;
+		    background: #3c2728;
+		    right: -61px;
+		    top: 0;
+		}
+
+		.nav_wxdialog .close:after {
+		    content: '';
+		    display: block;
+		    width: 60px;
+		    height: 60px;
+		    background: url(../img/navwx_close.png);
+		    opacity: 0.6;
+		}
+
+		.nav_wxdialog .close:hover:after {
+		    opacity: 1;
+		}
+
+		#cakeface_overlay {
+		    background-color: #000;
+		    display: none;
+		    height: 100% !important;
+		    left: 0;
+		    position: fixed;
+		    top: 0;
+		    bottom: 0;
+		    right: 0;
+		    width: 100%;
+		    opacity: 0.7;
+		    filter: alpha(opacity=70);
+		    z-index: 1003;
+		}
+
+		.div_logindialog {
+		    position: fixed;
+		    z-index: 1004;
+		    width: 365px;
+		    height: 525px;
+		    left: 50%;
+		    top: 50%;
+   			margin-left: -182.5px;
+    		margin-top: -262.5px;
+		    background: #2a282c url(../img/navwx_bg.jpg) no-repeat top center;
+		    text-align: center;
+		    color: #fff;
+		}
+
+		.div_logindialog h4 {
+		    font-size: 20px;
+		    font-weight: bold;
+		    margin: 54px 0 14px 0;
+		}
+
+		.div_logindialog .close {
+		    position: absolute;
+		    width: 60px;
+		    height: 60px;
+		    background: #3c2728;
+		    right: -61px;
+		    top: 0;
+		}
+		
+
+		.div_logindialog .close:after {
+		    content: '';
+		    display: block;
+		    width: 60px;
+		    height: 60px;
+		    background: url(../img/navwx_close.png);
+		    opacity: 0.6;
+		}
+
+		.div_logindialog .close:hover:after {
+		    opacity: 1;
 		}
 
